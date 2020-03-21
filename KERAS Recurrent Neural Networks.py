@@ -5,6 +5,10 @@ from keras.layers import Dropout
 from keras.layers import LSTM
 from keras.utils import np_utils
 
+#hack
+import os
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
+
 #Read the data, turn it into lower case
 data = open("Othello.txt").read().lower()
 #This get the set of characters used in the data and sorts them
